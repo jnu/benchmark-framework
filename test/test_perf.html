@@ -1,0 +1,40 @@
+<!doctype HTML>
+<html>
+<body>
+<h1>Look at the console!</h1>
+
+<script type="text/javascript" src="../dist/benchmark-framework.js"></script>
+
+
+<!-- SETUP -->
+<script type="benchmark-opt" name="setup">
+var count = 1000;
+var samples = new Array(count);
+for (var i = 0; i < count; i++) {
+    samples[i] = i;
+}
+</script>
+
+<!-- SUITE -->
+
+<!-- TEST 1 -->
+<script type="benchmark-test" name="while - reverse">
+var j = samples.length;
+var sum = 0;
+while (j--) {
+    sum += samples[j];
+}
+</script>
+
+<!-- TEST 2 -->
+<script type="benchmark-test" name="while - forward">
+var j = 0;
+var sum = 0;
+while (j++ < samples.length) {
+    sum += samples[j];
+}
+</script>
+
+
+</body>
+</html>

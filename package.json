@@ -1,0 +1,30 @@
+{
+  "name": "benchmark-framework",
+  "version": "0.0.1",
+  "description": "Quick framework over Benchmark.js for when JSPerf is down",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Automatic tests not set up yet. Please run test/test_perf.html in the browser.",
+    "start": "$(npm bin)/webpack --watch",
+    "build": "$(npm bin)/webpack",
+    "build-min": "NODE_ENV=production $(npm bin)/webpack",
+    "build-all": "npm run build && npm run build-min"
+  },
+  "keywords": [
+    "benchmark",
+    "perf",
+    "jsperf"
+  ],
+  "author": "Joe Nudell",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^5.7.2",
+    "babel-loader": "^5.3.2",
+    "eslint": "^1.0.0-rc-1",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.1"
+  }
+}
